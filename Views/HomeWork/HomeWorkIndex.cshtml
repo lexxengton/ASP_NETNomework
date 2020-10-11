@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+@model IEnumerable<WebStore.NewModels.Employe_ViewModel>
+@{
+    Layout = null;
+}
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FirstName</td>
+            <td>@item.SureName</td>
+            <td>@item.Patronimic</td>
+            <td>@item.Age</td>
+
+            <td>
+                @Html.ActionLink("Детали", "EmployeeDetails", new { id = item.Id });
+            </td>
+
+        </tr>
+    }
+
+    <td>
+        @Html.ActionLink("Students", "HomeWorkStudents");
+    </td>
+
+</table>

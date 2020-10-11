@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WebStore.NewModels.Employe_ViewModel>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FirstName</td>
+            <td>@item.SureName</td>
+            <td>@item.Patronimic</td>
+
+            <td>
+                @Html.ActionLink("Детали", "EmployeeDetails", new { id = item.Id });
+            </td>
+        </tr>
+    }
+
+
+    <td>
+        @Html.ActionLink("Students", "HomeWorkStudents");
+    </td>
+
+</table>

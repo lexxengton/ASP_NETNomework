@@ -1,0 +1,34 @@
+﻿@model WebStore.NewModels.Employe_ViewModel
+
+<table class="table-bordered">
+
+    <tr>
+        <td>Id</td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td>Surename</td>
+        <td>@Model.SureName:</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>@Model.FirstName:</td>
+    </tr>
+
+    <tr>
+        <td>Patronimic</td>
+        <td>@Model.Patronimic:</td>
+
+    </tr>
+
+    <tr>
+        <td>PhoneNumber:</td>
+        <td>@Model.PhoneNumber</td>
+
+    </tr>
+
+    <td>
+        @Html.ActionLink("Вернуться к списку", "HomeWorkIndex");
+    </td>
+
+</table>

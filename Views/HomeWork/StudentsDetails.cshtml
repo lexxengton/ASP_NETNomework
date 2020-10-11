@@ -1,0 +1,35 @@
+﻿
+@model WebStore.NewModels.HomeWorkModel
+
+<table class="table-bordered">
+
+    <tr>
+        <td>Id</td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td>Name:</td>
+        <td>@Model.StudentName:</td>
+    </tr>
+    <tr>
+        <td>Country:</td>
+        <td>@Model.Country:</td>
+    </tr>
+
+    <tr>
+        <td>Phone number:</td>
+        <td>@Model.PhoneNumber:</td>
+
+    </tr>
+
+    <tr>
+        <td>Book:</td>
+        <td>@Model.Book</td>
+
+    </tr>
+
+    <td>
+        @Html.ActionLink("Вернуться к списку", "HomeWorkStudents");
+    </td>
+
+</table>

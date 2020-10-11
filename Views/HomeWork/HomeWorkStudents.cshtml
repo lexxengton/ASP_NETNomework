@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+@model IEnumerable<WebStore.NewModels.HomeWorkModel>
+@{
+    Layout = null;
+}
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentName</td>
+
+            <td>
+                @Html.ActionLink("Детали", "StudentsDetails", new { id = item.Id });
+            </td>
+
+        </tr>
+    }
+
+    <td>
+        @Html.ActionLink("Emploees", "HomeWorkIndex");
+    </td>
+
+</table>

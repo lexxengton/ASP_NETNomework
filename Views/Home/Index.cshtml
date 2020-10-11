@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebStore.NewModels.Employe_ViewModel>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    { 
+    <tr>
+        <td>@item.FirstName</td>
+        <td>@item.SureName</td>
+        <td>@item.Patronimic</td>
+        <td>@item.Position</td>
+        
+    </tr>
+    }
+
+</table>
+
+<!--
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>Messgae from view</p>
+</body>
+</html>
+-->
