@@ -34,6 +34,8 @@ namespace WebStore
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             var hello = _configuration["CustomHelloWorld"];
 
 
@@ -43,17 +45,24 @@ namespace WebStore
             app.UseEndpoints(endpoints =>
             {
 
-                endpoints.MapControllerRoute(
+                 endpoints.MapControllerRoute(
                  name: "default",
-                //pattern: "{controller=Home}/{action=Index}/{id?}");
-                pattern: "{controller=HomeWork}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+                // pattern: "{controller=HomeWork}/{action=Index}/{id?}");
+                //pattern: "{controller=SecondHomeWork}/{ action = Index}/{ id ?}");
 
-                //endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(
+                 name: "custom",
+                
+                pattern: "{controller=SecondHomeWork}/{ action = Index}/{ id ?}");
+                //https://localhost:44313/SecondHomeWork/Index
 
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync(hello);//("Hello World!");
-                });
+                endpoints.MapDefaultControllerRoute();
+
+              //  endpoints.MapGet("/", async context =>
+              //  {
+              //      await context.Response.WriteAsync(hello);//("Hello World!");
+              //  });
             });
         }
     }

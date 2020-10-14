@@ -45,7 +45,7 @@ namespace WebStore.Controllers
         };
 
 
-        private readonly List<Employe_ViewModel> _emploeesHomeWork = new WebStore.Controllers.HomeController().ReturnEmployeeList();
+        private readonly List<EmployeController> _emploeesHomeWork = new WebStore.Controllers.HomeController().ReturnEmployeeList();
 
      public IActionResult HomeWorkIndex()
         {

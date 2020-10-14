@@ -10,9 +10,9 @@ namespace WebStore.Controllers
     public class HomeController : Controller
     {
         //далее модель сотрудников (_emploees)
-        private readonly List<Employe_ViewModel> _emploees = new List<Employe_ViewModel>
+        private readonly List<EmployeController> _emploees = new List<EmployeController>
         {
-          new Employe_ViewModel
+          new EmployeController
           {
             Id =1,
             FirstName = "Иван",
@@ -24,7 +24,7 @@ namespace WebStore.Controllers
 
           },
 
-           new Employe_ViewModel
+           new EmployeController
           {
             Id =2,
             FirstName = "Василий",
@@ -42,7 +42,7 @@ namespace WebStore.Controllers
 };
 
 
-        public List<Employe_ViewModel> ReturnEmployeeList()
+        public List<EmployeController> ReturnEmployeeList()
         {
             return _emploees; 
         }
